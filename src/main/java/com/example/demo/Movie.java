@@ -25,6 +25,7 @@ public class Movie {
     private int duration;
     private String summary;
     @ManyToMany(mappedBy = "movieList")
+    @JoinTable(name = "movie_genre_rel")
     private List<Genre> genre;
     @OneToMany(mappedBy = "movie",fetch = FetchType.LAZY)
     private List<MovieCinema> movieCinemaList;

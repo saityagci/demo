@@ -12,4 +12,6 @@ public class Cinema {
     private String sponsorName;
     @OneToMany(mappedBy = "cinema",fetch = FetchType.LAZY)
     private List<MovieCinema> movieCinemaList;
+    @ManyToOne
+    private Location location;
 }

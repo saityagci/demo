@@ -10,5 +10,7 @@ public class MovieCinema {
     private Long id;
     @ManyToOne
     private Movie movie;
+    @ManyToOne
+    private Cinema cinema;
     private Date dateTime;
 }

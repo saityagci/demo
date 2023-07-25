@@ -14,7 +14,7 @@ public class AccountDetails {
     private String country;
     private String city;
     private String state;
-    private String postCode;
+    private String postalCode;
     private int age;
     @Enumerated(value = EnumType.STRING)
     private Role role;

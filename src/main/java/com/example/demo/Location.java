@@ -14,7 +14,7 @@ public class Location {
     private String country;
     private String city;
     private String state;
-    private String postCode;
+    private String postalCode;
     private String address;
     @OneToMany(mappedBy = "location",fetch = FetchType.LAZY)
     private List<Cinema> cinemaList;

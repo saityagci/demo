@@ -9,7 +9,7 @@ public class Cinema {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String sponsorName;
+    private String sponsoredName;
     @OneToMany(mappedBy = "cinema",fetch = FetchType.LAZY)
     private List<MovieCinema> movieCinemaList;
     @ManyToOne

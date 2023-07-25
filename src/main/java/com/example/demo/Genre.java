@@ -2,6 +2,7 @@ package com.example.demo;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Genre {
@@ -9,6 +10,8 @@ public class Genre {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @ManyToMany
-    private List<Movie> movieList;
+   @ManyToMany(mappedBy = "genreList")
+    private Set<Movie> movieList;
+
+
 }

@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 
@@ -21,12 +22,12 @@ public class Movie {
     @Enumerated(value = EnumType.STRING)
     private State state;
     @Column(columnDefinition = "DATE")
-    private Date date;
+    private Date releaseDate;
     private int duration;
     private String summary;
-    @ManyToMany(mappedBy = "movieList")
-    @JoinTable(name = "movie_genre_rel")
-    private List<Genre> genre;
+    @ManyToMany
+  //  @JoinTable(name = "movie_genre_rel")
+    private Set<Genre> genreList;
     @OneToMany(mappedBy = "movie",fetch = FetchType.LAZY)
     private List<MovieCinema> movieCinemaList;
 
